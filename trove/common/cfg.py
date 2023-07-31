@@ -848,6 +848,10 @@ redis_opts = [
                help='Namespace to load replication strategies from.'),
     cfg.PortOpt('redis_port', default=6379,
                 help='The TCP port the server listens on.'),
+    cfg.StrOpt(
+        'docker_image', default='bitnami/redis',
+        help='Redis docker image.'
+    ),
     cfg.StrOpt('mount_point', default='/var/lib/redis',
                help="Filesystem path for mounting "
                "volumes if volume support is enabled."),
