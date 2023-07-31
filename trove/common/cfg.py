@@ -846,6 +846,8 @@ redis_opts = [
                default='trove.guestagent.strategies.replication.experimental.'
                        'redis_sync',
                help='Namespace to load replication strategies from.'),
+    cfg.PortOpt('redis_port', default=6379,
+                help='The TCP port the server listens on.'),
     cfg.StrOpt('mount_point', default='/var/lib/redis',
                help="Filesystem path for mounting "
                "volumes if volume support is enabled."),
